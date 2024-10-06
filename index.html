@@ -11,6 +11,7 @@
         const getName = () => {
             const name = window.localStorage.getItem('Name') || prompt("Insert your name");
             window.localStorage.setItem('Name', name);
+            return name;
         }
         const getDate = () => {
             const date = new Date();
