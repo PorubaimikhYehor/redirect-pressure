@@ -7,8 +7,15 @@
 </head>
 <body>
     <script>
-        const name = prompt("Insert name");
-        console.log(name);
+        debugger;
+        const name = window.localStorage.getItem('Name') || prompt("Insert your name");
+        window.localStorage.setItem('Name', name);
+        const getDate = () => {
+            const date = new Date();
+            const dateString = `${date.toJSON().slice(0,10)}+${date.getHours()}:${date.getMinutes()}`
+        }
+        window.location = 'https://docs.google.com/forms/d/e/1FAIpQLSe9WVczrAbj1GFbDV10nhgksVnDaPYNy4mQcsuvQEtWaxzVqA/viewform?usp=pp_url&entry.283514237=Yehor&entry.595881428=2024-10-06+20:22';
     </script>
 </body>
+
 </html>
